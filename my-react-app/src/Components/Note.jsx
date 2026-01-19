@@ -1,6 +1,5 @@
 import React from "react";
 import { BsFillPlusCircleFill } from "react-icons/bs";
-import notes from "../notes";
 
 function Note(props) {
   return (

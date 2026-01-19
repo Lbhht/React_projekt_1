@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
+import notes from "../notes";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -10,7 +11,11 @@ function App() {
     <div id="appContainer">
       <Header />
       <div id="noteContainer">
-        <Note title="Skcikad titel" content="skcikad content" />
+        {notes.map((props) => {
+          return (
+            <Note key={props.key} title={props.title} content={props.content} />
+          );
+        })}
       </div>
       <Footer />
     </div>
